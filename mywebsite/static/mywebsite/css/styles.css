@@ -1,0 +1,103 @@
+/* Dark hero section styling */
+body {
+    background-color: #171818;
+    color: #808289;
+}
+
+
+.hero-section {
+    height: 100vh;
+    background-color: #0e0e0e;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.profile img {
+    border: 2px solid #ffffff33;
+}
+
+/* Simple fade animation */
+.animate-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.pulsing-text {
+    animation: pulse 2s infinite;
+    color: #3ad82e;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to cards */
+.card {
+    animation: fadeInUp 0.6s ease-in-out both;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth load of sections */
+.section {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+
+
+.section-headers {
+    border: 2px dashed gray;
+}
+
+
+/* --------------------------------- */
+
+.skill {
+    background-color: #171818;
+}
+
+.skill-title {
+    background-color: #0E0E0E;
+}
+
+.proj-img {
+    max-height: 271px;
+}
+
+.hover-color:hover {
+    color: rgb(255, 255, 255) !important;
+}
