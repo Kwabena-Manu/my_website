@@ -1,0 +1,62 @@
+{% load static %}
+{% load bootstrap5 %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title %}Kwabena Manu{% endblock %} </title>
+
+    {% bootstrap_css %}
+
+    <link rel="stylesheet" href="{% static 'mywebsite/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Kwabena Manu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    {% comment %} <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> {% endcomment %}
+                    <li class="nav-item"><a  class="btn resume-button btn-secondary text-white  rounded px-4">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="profile mb-3">
+            {% comment %} <!-- <img src="{% static 'mywebsite/images/KobCommerce.png' %}" class="rounded-circle shadow-sm" alt="Profile"
+                width="60"> --> {% endcomment %}
+                
+            <h3 class="mt-2 fw-light text-muted fw-bold">Hi! I am Kwabena Manu</h4>
+            <span class="pulsing-text">Available for Work</span>
+        </div>
+        <h1 class="display-3 fw-semi-bold mt-3 animate-fade">I Build Software and Systems That Scale.</h1>
+        <p class="lead mt-3 font-monospace fw-semibold text-muted">I specialize in full-stack web development, performance-first systems, and clean
+            user experiences.</p>
+        <div class="mt-4">
+            <a href="#projects" class="btn btn-outline-light me-3 rounded-pill py-3 px-4">See My Works</a>
+            <a  class="btn btn-light resume-button text-dark rounded-pill py-3 px-5">Resume</a>
+        </div>
+    </div>
+</section>
+
+
+    <main class="mt-4 ">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% bootstrap_javascript %}
+    <script src="{% static 'mywebsite/js/scripts.js' %}"></script>
+</body>
+</html>
