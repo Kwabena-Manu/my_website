@@ -4,3 +4,4 @@ capvenv/
 static/
 media/
 *.log
+staticfiles/
