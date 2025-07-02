@@ -18,7 +18,6 @@ capstone/
     capstone/         # Django project settings and URLs
     mywebsite/        # Main app: models, views, templates, static
     media/            # Uploaded images (projects, skills, blog)
-    staticfiles/      # Collected static files for production
     db.sqlite3        # SQLite database
     manage.py
     requirements.txt
