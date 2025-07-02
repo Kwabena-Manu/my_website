@@ -1,4 +1,7 @@
 __pycache__/
 capvenv/
+*sqlite3
+static/
+media/
 *.log
 staticfiles/
