@@ -1,4 +1,3 @@
-# README.md
 # Portfolio Web App
 
 This is a Django-based portfolio web application for showcasing projects, skills, and blog posts. It uses Bootstrap 5 for styling and supports image uploads for projects and skills.
