@@ -7,8 +7,8 @@ Home - Kwabena Manu
 {% block content %}
 <!-- <h1 class="text-center mb-5 text-white">What I can do</h1> -->
 <a id="skills">
-    <div class="d-flex my-5">
-        <span class="section-headers font-monospace bg-black rounded-pill text-center px-5 py-3 mx-auto h4">MySkills
+    <div class="skill-section-title d-flex w-100 container my-5">
+        <span class="section-headers  ms-4 font-monospace px-5 py-3  h1 ">My Skills
         </span>
     </div>
     <section class="section mt-5 px-5">
@@ -60,19 +60,19 @@ Home - Kwabena Manu
 
 
 
-<section class="section mt-5 mx-auto">
+<section class="section mt-5 pt-5   mx-auto">
     <a id="projects">
 
-        <div class="d-flex my-5">
-            <span class="section-headers font-monospace bg-black rounded-pill text-center px-5 py-3 mx-auto h4">
+        <div class="project-section-title d-flex w-full container  my-5">
+            <span class="section-headers ms-4 font-monospace px-5 py-3  h1">
                 My Projects
             </span>
         </div>
 
-        <div class="row justify-content-center px-lg-5">
+        <div class="row justify-content-center mx-auto mx-5rem mw-100   container ">
             {% for project in projects %}
             <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 border border-dark bg-dark text-white">
+                <div class="card project-card h-100   text-white">
 
                     <!-- Image or Skeleton -->
                     {% if project.image %}
@@ -89,13 +89,13 @@ Home - Kwabena Manu
 
                     <!-- Body -->
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title font-monospace">{{ project.title }}</h5>
-                        <p class="card-text text-muted">{{ project.description|truncatewords:50 }}</p>
+                        <p class="card-title project-title text-black font-monospace">{{ project.title }}.</p>
+                        <p class="card-text project-description text-muted">{{ project.description|truncatewords:50 }}</p>
 
                         <!-- Tools -->
                         <div class="d-flex flex-wrap justify-content-start gap-2 mt-3">
                             {% for tool in project.skills.all %}
-                            <span class="section-headers font-monospace bg-black text-white rounded-pill px-3 py-1">
+                            <span class="section-headers font-monospace  text-black rounded-pill px-3 py-1">
                                 {{ tool.name }}
                             </span>
                             {% endfor %}
@@ -104,7 +104,7 @@ Home - Kwabena Manu
                         <!-- Links -->
                         <div class="mt-auto pt-3">
                             {% if project.github_link %}
-                            <a href="{{ project.github_link }}" class="btn btn-outline-light btn-sm me-2"
+                            <a href="{{ project.github_link }}" class="btn btn-outline-dark btn-sm me-2"
                                 target="_blank">GitHub</a>
                             {% endif %}
                             {% if project.live_link %}
@@ -138,11 +138,11 @@ Home - Kwabena Manu
     </ul>
 </section> -->
 <footer class="section my-5 px-5 pt-5">
-    <div class="container">
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="fw-bold mb-3">I'm currently open for opportunities in the Bay Area, CA.</h2>
-                <p class="lead mb-4">Get in Touch!</p>
+    <div class="">
+        <div class="row  w-100 align-items-center mb-5">
+            <div class="col-lg-6 mx-auto mb-4 mb-lg-0">
+                <h2 class="get-in-touch-text fw-bold mb-3">I am looking for Grad/Entry-Level Positions in SWE! Interested? Get in touch!</h2>
+                {% comment %} <p class="lead mb-4">Get in Touch!</p> {% endcomment %}
 
                 <form id="contactForm">
                     <div class="mb-3">
@@ -160,44 +160,44 @@ Home - Kwabena Manu
                     <div id="formMessage" class="mt-3"></div>
                 </form>
             </div>
-            <div class="col-lg-6 d-flex justify-content-lg-end justify-content-start">
+           
+        </div>
+
+        {% comment %} <hr class="border-secondary mb-4"> {% endcomment %}
+         <div class="d-flex justify-content-left justify-content-lg-center h4">
                 <nav class="nav flex-column flex-md-row">
-                    <a class="nav-link text-white-50 mx-md-2 hover-color " href="projects">Projects.</a>
-                    <a class="nav-link resume-button text-white-50 mx-md-2 hover-color" href="#">Resume.</a>
-                    <a class="nav-link text-white-50 mx-md-2 hover-color" href="https://www.github.com/Kwabena-Manu"
+                    <a class="footer-links nav-link  text-dark mx-md-2  " href="projects">Projects.</a>
+                    <a class="footer-links nav-link resume-button text-dark mx-md-2 " href="#">Resume.</a>
+                    <a class="footer-links nav-link text-dark mx-md-2 " href="https://www.github.com/Kwabena-Manu"
                         target="_blank" rel="noopener">GitHub.</a>
-                    <a class="nav-link text-white-50 mx-md-2 hover-color" href="https://www.linkedin.com/in/kwabenamanu"
+                    <a class="footer-links nav-link text-dark mx-md-2 " href="https://www.linkedin.com/in/kwabenamanu"
                         target="_blank" rel="noopener">LinkedIn.</a>
                 </nav>
             </div>
-        </div>
-
-        <hr class="border-secondary mb-4">
-
-        <div class="row align-items-center text-secondary-emphasis">
+        <div class="row align-items-center text-dark">
             <div class="col-md-6 col-lg-4 d-flex align-items-center mb-3 mb-md-0">
                 <div class="me-3">
                     <a href="https://www.github.com/Kwabena-Manu"
-                        class="text-white-50 text-decoration-none me-2 fs-4 hover-color"><i
+                        class="text-dark text-decoration-none me-2 fs-4 hover-color"><i
                             class="bi bi-github"></i></a>
                     <a href="https://www.linkedin.com/in/kwabenamanu"
-                        class="text-white-50 text-decoration-none me-2 fs-4 hover-color"><i
+                        class="text-dark text-decoration-none me-2 fs-4 hover-color"><i
                             class="bi bi-linkedin"></i></a>
                     <!-- <a href="#" class="text-white-50 text-decoration-none me-2 fs-4 hover-color"><i
                             class="bi bi-twitter-x"></i></a> -->
                     <a href="mailto:kwabenamanu61@yahoo.com"
-                        class="text-white-50 text-decoration-none fs-4 hover-color"><i
+                        class="text-dark text-decoration-none fs-4 hover-color"><i
                             class="bi bi-envelope-fill"></i></a>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4 text-start text-md-center mb-3 mb-md-0">
-                <span class="d-block">version 1.0.0</span>
+                <span class="d-block">version {{APP_VERSION}}</span>
                 <!-- <a href="#" class="text-white-50 text-decoration-none small">view previous versions</a> -->
             </div>
 
             <div class="col-lg-4 text-start text-lg-end">
-                <p class="mb-0">© 2025 - Copyright. All Rights Reserved</p>
+                <p class="mb-0">© 2025 - {%now "Y"%} - Copyright. All Rights Reserved</p>
                 <p class="mb-0">Designed and Built by Me.</p>
             </div>
         </div>

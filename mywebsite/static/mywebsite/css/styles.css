@@ -1,15 +1,251 @@
-/* Dark hero section styling */
+/* Defining fonts for mango grotesque */
+
+@font-face {
+    font-family: 'MangoGrotesque';
+    src: url('../fonts/MangoGrotesque/Web-TT/MangoGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MangoGrotesque';
+    src: url('../fonts/MangoGrotesque/Web-TT/MangoGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'MangoGrotesque';
+    src: url('../fonts/MangoGrotesque/Web-TT/MangoGrotesque-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+@media (min-width: 1024px) {
+    .heroTextTop {
+        font-size: 10vw !important;
+    }
+
+    .heroTextBottom {
+        font-size: 21vw !important;
+    }
+
+    .skill-section-title,
+    .project-section-title {
+        padding-left: 215px;
+        max-width: 100%;
+    }
+
+    .mx-5rem {
+        width: 80% !important;
+        margin-right: calc(8 * var(--bs-gutter-x)) !important;
+        margin-left: calc(8 * var(--bs-gutter-x)) !important;
+    }
+
+}
+
+
 body {
-    background-color: #171818;
-    color: #808289;
+    /* background-color: #171818; */
+    background-color: #E6E1DD;
+    /* color: #808289; */
+    color: #1A1A1A;
+}
+
+.heroTextBottom {
+
+    font-family: 'MangoGrotesque', sans-serif;
+    font-weight: 700;
+    font-size: 30vw;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    line-height: normal;
+
+
+}
+
+.heroTextTop {
+    font-family: 'MangoGrotesque', sans-serif;
+    font-weight: 700;
+    font-size: 20vw;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    line-height: normal;
+}
+
+
+
+
+.heroTextTopUnder {
+    font-family: 'Courier New',
+        Courier,
+        monospace;
+    font-weight: 100;
+    font-size: 5vw;
+    text-transform: lowercase;
+
+}
+
+
+.about-me-section {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 10vw;
+
+
+}
+
+.about-me-title {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.about-me-text {
+    font-family: 'MangoGrotesque';
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 510;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0;
+    width: 90%;
+}
+
+@media (min-width: 1024px) {
+    .about-me-text {
+        font-family: 'MangoGrotesque';
+        font-size: 5.5rem;
+        font-weight: 700;
+        width: 60%;
+    }
+
+    .about-me-title {
+        font-size: xx-large;
+    }
+
+    .hero-section {
+        padding-left: 300px !important;
+        padding-bottom: 200px;
+    }
+}
+
+
+
+.navButton {
+    font-family: 'MangoGrotesque', sans-serif;
+    padding: 0.6rem;
+    padding-top: 0.8rem;
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 2.3rem;
+    letter-spacing: 0.01em;
+    height: fit-content;
+    line-height: 1.5rem;
+    border: 2px dashed gray;
+
+
+}
+
+.navbar-toggler {
+    background: rgba(230, 225, 221, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: fit-content;
+    height: fit-content;
+}
+
+.navbar-toggler-icon {
+    font-family: "MangoGrotesque";
+    font-size: xx-large;
+    height: fit-content;
+}
+
+/* .grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: -10;
+    padding: 0;
+    background-color: rgba(230, 225, 221, 0.1);
+
+} */
+
+
+.grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -10;
+    padding: 0;
+    background-color: rgba(230, 225, 221, 0.1);
+
+    /* Controls density */
+    --grid-col-size: 40px;
+    /* smaller = more columns */
+    --grid-row-size: 40px;
+    /* smaller = more rows */
+    --grid-line-color: #C6BBB2;
+    --grid-line-width: 1px;
+
+    background-image:
+        /* vertical lines */
+        repeating-linear-gradient(to right,
+            var(--grid-line-color) 0,
+            var(--grid-line-color) var(--grid-line-width),
+            transparent var(--grid-line-width),
+            transparent var(--grid-col-size)),
+        /* horizontal lines */
+        repeating-linear-gradient(to bottom,
+            var(--grid-line-color) 0,
+            var(--grid-line-color) var(--grid-line-width),
+            transparent var(--grid-line-width),
+            transparent var(--grid-row-size));
+    background-size: 100% 100%;
+}
+
+.line {
+    width: 1px;
+    height: 100%;
+    background-color: #C6BBB2;
+    transform-origin: top;
+    transform: scaleY(1);
+    /* Start hidden for animation */
+    transition: background-color 0.3s ease;
+}
+
+
+.logo-line {
+    display: flex;
+    color: #1A1A1A;
+    background: rgba(230, 225, 221, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.1em 0.3em;
+    width: fit-content;
+    text-transform: uppercase;
+    line-height: 1;
 }
 
 
 .hero-section {
-    height: 100vh;
-    background-color: #0e0e0e;
-    padding: 80px 20px;
-    position: relative;
+    /* height: 100vh; */
+    /* background-color: #0e0e0e; */
+    background-color: transparent;
+    padding-top: 200px;
+    padding-left: 40px;
 }
 
 .profile img {
@@ -96,8 +332,86 @@ body {
 
 .proj-img {
     max-height: 271px;
+    height: 271px;
 }
 
 .hover-color:hover {
     color: rgb(255, 255, 255) !important;
+}
+
+.project-title {
+    font-family: 'MangoGrotesque', sans-serif;
+    font-weight: 800;
+    font-size: larger;
+    text-transform: uppercase;
+    line-height: normal;
+    white-space: nowrap;
+
+}
+
+@media (min-width:1024px) {
+    .project-title {
+
+        font-size: 25px;
+
+
+    }
+}
+
+
+
+.project-card {
+    border-radius: 8px;
+}
+
+
+.footer-links {
+    font-family: 'MangoGrotesque';
+    /* font-weight: 800; */
+    font-size: 2.3rem;
+    letter-spacing: 0.01em;
+    padding: 3px 10px;
+    /* background: rgba(230, 225, 221, 0.35); */
+    background: white;
+    border: 1px black dashed;
+    border-radius: 8px;
+}
+
+.footer-links:hover,
+.navButton:Hover {
+    background-color: black;
+    color: white !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px black solid;
+
+}
+
+.get-in-touch-text {
+    font-family: 'MangoGrotesque', sans-serif;
+    font-size: 3.6rem;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+
+}
+
+
+#sendEmailButton {
+    font-family: "MangoGrotesque", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+
+}
+
+#sendEmailButton:hover {
+
+    background-color: black;
+    color: white !important;
+
+
 }

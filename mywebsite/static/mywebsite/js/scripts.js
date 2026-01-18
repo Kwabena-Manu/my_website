@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             resbut.addEventListener("click", function (event) {
                 event.preventDefault();
-                window.location.href = "/static/mywebsite/files/Kwabena-Manu-Resume-2025-11.pdf";
+                window.location.href = "/static/mywebsite/files/Kwabena_Manu_Resume_2025_11.pdf";
             });
         });
     }
